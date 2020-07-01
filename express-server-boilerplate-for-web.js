@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const port = 8080;
 const os = require('os');
+const { cwd } = require('process');
 const ifaces = os.networkInterfaces();
 let runTime;
 
@@ -27,7 +28,7 @@ const getIPV4 = () => {
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    const destPath = path.join(__dirname, 'index.html');
+    const destPath = path.join(cwd(), 'index.html');
     res.sendFile(destPath);
 });
 
