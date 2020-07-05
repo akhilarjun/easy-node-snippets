@@ -1,6 +1,6 @@
 {
   "name": "easy-node-snippets",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Easy node snippets to save your time",
   "main": "index.js",
   "scripts": {
