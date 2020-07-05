@@ -1,3 +1,10 @@
+/**
+ * Express Web Server With Logger
+ * 
+ * @author Akhil Arjun
+ * @version 0.1.6
+ * 
+ */
 const {app} = require('./express-server-boilerplate-for-web');
 const fs = require('fs');
 const port = 8080;
@@ -19,6 +26,9 @@ const rollingLogOptions = {
     timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
 };
 
+/**
+ * Middleware to add log instance to each req object
+ */
 app.use((req, res, next) => {
     req.getLogger = () => {
         return log;
@@ -46,6 +56,8 @@ const checkAndCreateLogFolder = () => {
 
 /**
  * Starts the express server
+ * @param {boolean} [useLogger] This is a optional flag. Send true to use 
+ * rollingFileLogger (default behavior) or send false to use console logger
  * @param {number} [_port] Optional port number. Defaults to 8080
  * @returns {void} 
  */
