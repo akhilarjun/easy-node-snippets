@@ -9,11 +9,11 @@
 /**
  * Express Web Server
  */
-let expressAppForWeb = require('./express-server-boilerplate-for-web');
+let expressAppForWeb = require('./src/express-server-boilerplate-for-web');
 /**
  * Express Web Server with Logger
  */
-let expressAppWithLoggerForWeb = require('./express-server-boilerplate-for-web-with-logger');
+let expressAppWithLoggerForWeb = require('./src/express-server-boilerplate-for-web-with-logger');
 
 module.exports = {
     expressWebApp: expressAppForWeb,
